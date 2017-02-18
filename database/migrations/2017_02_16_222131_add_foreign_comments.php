@@ -15,7 +15,6 @@ class AddForeignComments extends Migration
     {
         Schema::table('comments', function (Blueprint $table) {
             $table->foreign('user_id')->references('id')->on('users');
-            $table->foreign('article_id')->references('id')->on('articles');
         });
     }
 

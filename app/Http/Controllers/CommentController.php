@@ -15,7 +15,9 @@ class CommentController extends Controller
      */
     public function index()
     {
-        //
+        $comments = Comment::paginate(5);
+
+        return view('comments.index', ['comments' => $comments]);
     }
 
     /**
@@ -45,7 +47,6 @@ class CommentController extends Controller
 
         Comment::create([
             'user_id' => Auth::user()->id,
-            'article_id' => Auth::article()->id,
             'content' => $request->content
         ]);
 

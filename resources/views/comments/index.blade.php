@@ -2,16 +2,14 @@
 
 @section('content')
 
-@foreach($articles as $article)
+@foreach($comments as $comment)
 
-    <center><h2>{{$article->title}}:</h2></center>
+    <center><p>{{$comment->content}}</p></center>
 
-    <center><p>{{$article->content}}</p></center>
-
-    <center><p> Written by: {{$article->user->name}}</p></center>
+    <center><p> Written by: {{$comment->user->name}}</p></center>
 
 @endforeach
 
-<center>{{$articles->links()}}</center>
+<center>{{$comments->links()}}</center>
 
 @endsection

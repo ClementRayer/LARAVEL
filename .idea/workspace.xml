@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="03c94f87-2119-4946-9b8f-ff8ada367504" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/IIM_A2_laravel_rendu.iml" afterPath="$PROJECT_DIR$/.idea/IIM_A2_laravel_rendu.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/articles/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/articles/show.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/home.blade.php" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" />
     </list>
     <ignored path="IIM_A2_laravel_rendu.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,26 +25,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="home.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="home.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+            <state relative-caret-position="45">
+              <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="7" selection-end-column="59" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
+      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/articles/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1155">
-              <caret line="77" column="33" selection-start-line="77" selection-start-column="33" selection-end-line="77" selection-end-column="33" />
-              <folding>
-                <marker date="1487442805000" expanded="true" signature="469:536" ph="..." />
-                <marker date="1487442805000" expanded="true" signature="482:534" ph="..." />
-                <marker date="1487442805000" expanded="true" signature="483:533" ph="..." />
-              </folding>
+            <state relative-caret-position="195">
+              <caret line="13" column="56" selection-start-line="13" selection-start-column="56" selection-end-line="13" selection-end-column="56" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -72,9 +68,10 @@
         <option value="$PROJECT_DIR$/resources/views/comments/index.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/CommentController.php" />
         <option value="$PROJECT_DIR$/resources/views/articles/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/home.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/welcome.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/home.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/articles/show.blade.php" />
       </list>
     </option>
   </component>
@@ -173,7 +170,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="layouts" />
+              <option name="myItemId" value="articles" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -267,12 +264,12 @@
       <workItem from="1487418414548" duration="878000" />
       <workItem from="1487419637886" duration="1600000" />
       <workItem from="1487441365174" duration="661000" />
-      <workItem from="1487442461583" duration="404000" />
+      <workItem from="1487442461583" duration="1327000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3543000" />
+    <option name="totallyTimeSpent" value="4466000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="809" extended-state="6" />
@@ -450,18 +447,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1155">
-          <caret line="77" column="33" selection-start-line="77" selection-start-column="33" selection-end-line="77" selection-end-column="33" />
-          <folding>
-            <marker date="1487442805000" expanded="true" signature="469:536" ph="..." />
-            <marker date="1487442805000" expanded="true" signature="482:534" ph="..." />
-            <marker date="1487442805000" expanded="true" signature="483:533" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="128">
@@ -470,10 +455,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="54" column="29" selection-start-line="54" selection-start-column="29" selection-end-line="54" selection-end-column="29" />
+          <folding>
+            <marker date="1487443259000" expanded="true" signature="469:536" ph="..." />
+            <marker date="1487443259000" expanded="true" signature="482:534" ph="..." />
+            <marker date="1487443259000" expanded="true" signature="483:533" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        <state relative-caret-position="45">
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="7" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/articles/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="56" selection-start-line="13" selection-start-column="56" selection-end-line="13" selection-end-column="56" />
           <folding />
         </state>
       </provider>

@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="03c94f87-2119-4946-9b8f-ff8ada367504" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/articles/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/articles/index.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" />
     </list>
+=======
+    <list default="true" id="03c94f87-2119-4946-9b8f-ff8ada367504" name="Default" comment="" />
+>>>>>>> Stashed changes
     <ignored path="IIM_A2_laravel_rendu.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -262,13 +266,37 @@
       <updated>1487418412144</updated>
       <workItem from="1487418414548" duration="878000" />
       <workItem from="1487419637886" duration="1600000" />
+<<<<<<< Updated upstream
       <workItem from="1487441365174" duration="661000" />
+<<<<<<< Updated upstream
       <workItem from="1487442461583" duration="1491000" />
+=======
+<<<<<<< Updated upstream
+      <workItem from="1487442461583" duration="1327000" />
+=======
+      <workItem from="1487442461583" duration="404000" />
+=======
+      <workItem from="1487441365174" duration="909000" />
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< Updated upstream
     <option name="totallyTimeSpent" value="4630000" />
+=======
+<<<<<<< Updated upstream
+    <option name="totallyTimeSpent" value="4466000" />
+=======
+<<<<<<< Updated upstream
+    <option name="totallyTimeSpent" value="3543000" />
+=======
+    <option name="totallyTimeSpent" value="3387000" />
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="809" extended-state="6" />

@@ -11,6 +11,8 @@
 |
 */
 
+$faker = Faker\Factory::create('fr_FR');
+
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 $factory->define(App\User::class, function (Faker\Generator $faker) {
     static $password;
@@ -25,8 +27,8 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
 
 $factory->define(App\Article::class, function (Faker\Generator $faker) {
     return [
-        'title' => $faker->title,
-        'content' => $faker->paragraph,
+        'title' => $faker->city,
+        'content' => $faker->paragraph(7),
         'user_id' => function () {
             return factory(App\User::class)->create()->id;
         }

@@ -11,13 +11,13 @@
                         <p>{{$article->content}}</p><br>
                         <b>Written by <a href="/user/{{$article->user_id}}">{{$article->user->name}}</a><br><br><br></b>
 
-                        <a href="{{$article->id}}/edit">Edit</a>
+                        <a class="btn btn-default" href="{{$article->id}}/edit">Edit</a>
                         <br>
-                        <a href="https://www.facebook.com/sharer/sharer.php?u=http://127.0.0.1:8000/article/{{$article->id}}">Share
+                        <a class="btn btn-default" href="https://www.facebook.com/sharer/sharer.php?u=http://127.0.0.1:8000/article/{{$article->id}}">Share
                             on
                             Facebook</a>
                         <br>
-                        <a href="https://twitter.com/intent/tweet/?url=http://127.0.0.1:8000/article/{{$article->id}}&text=Regardez cet article!">Share
+                        <a class="btn btn-default" href="https://twitter.com/intent/tweet/?url=http://127.0.0.1:8000/article/{{$article->id}}&text=Regardez cet article!">Share
                             on Twitter</a>
                 </div>
             </div>

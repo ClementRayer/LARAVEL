@@ -60,8 +60,12 @@
 
                                 <ul class="dropdown-menu" role="menu">
                                     <li>
+                                        <a href="/home">My profile</a>
+                                        <a href="/article">Articles</a>
+                                        <a href="/article/create">Create an Article</a>
+                                        <hr>
                                         <a href="{{ route('logout') }}"
-                                            onclick="event.preventDefault();
+                                           onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                             Logout
                                         </a>

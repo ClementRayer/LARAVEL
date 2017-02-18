@@ -1,19 +1,54 @@
 @extends('layouts.app')
 
 @section('content')
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="panel panel-default">
+                    <div class="panel-heading"><h4>Write a new article</h4></div>
 
-    <h1>Écrire un article</h1>
+                    <form method="POST" action="{{route('article.store')}}" class="form-horizontal">
 
-    @include('messages.errors')
+                        <fieldset>
+                            <br>
+                        @include('messages.errors')
+                        <!-- Text input-->
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="title">Title of your article</label>
+                                <div class="col-md-6">
+                                    {{csrf_field()}}
+                                    <input id="title" name="title" type="text" placeholder="Title"
+                                           class="form-control input-md">
+                                </div>
+                            </div>
 
-    <form method="POST" action="{{route('article.store')}}">
-        {{csrf_field()}}
-        <input type="text" name="title" placeholder="Titre">
-        <br>
-        <textarea name="content" id="" cols="30" rows="5" placeholder="Contenu"></textarea>
-        <br>
-        <input type="submit" value="Envoyer">
-    </form>
+                            <!-- Textarea -->
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="content">Content of your article</label>
+                                <div class="col-md-6">
+                                    <textarea class="form-control" placeholder="Content" id="content"
+                                              name="content"></textarea>
+                                </div>
+                            </div>
 
+                            <!-- Button -->
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="singlebutton">Send your article</label>
+                                <div class="col-md-4">
+                                    <br>
+                                    <center>
+                                        <button id="singlebutton" name="singlebutton" type="submit"
+                                                class="btn btn-primary">Send
+                                        </button>
+                                    </center>
+                                </div>
+                            </div>
+
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
 @endsection

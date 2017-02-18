@@ -13,12 +13,15 @@
 
                         <a class="btn btn-default" href="{{$article->id}}/edit">Edit</a>
                         <br>
+                        <br>
                         <a class="btn btn-default" href="https://www.facebook.com/sharer/sharer.php?u=http://127.0.0.1:8000/article/{{$article->id}}">Share
                             on
                             Facebook</a>
                         <br>
+                        <br>
                         <a class="btn btn-default" href="https://twitter.com/intent/tweet/?url=http://127.0.0.1:8000/article/{{$article->id}}&text=Regardez cet article!">Share
                             on Twitter</a>
+                        <br>
                 </div>
             </div>
         </div>

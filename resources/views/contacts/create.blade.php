@@ -7,11 +7,13 @@
                 <div class="panel panel-default">
                     <div class="panel-heading"><h4>Fill the form</h4></div>
 
-                    <form method="POST" enctype="multipart/form-data" action="{{route('contact.store')}}" class="form-horizontal">
+                    <form method="POST" enctype="multipart/form-data" action="{{route('contact.store')}}"
+                          class="form-horizontal">
 
                         <fieldset>
+                            @include('messages.errors')
                             <br>
-                        <!-- Text input-->
+                            <!-- Text input-->
                             <div class="form-group">
                                 <label class="col-md-3 control-label" for="name">Your name</label>
                                 <div class="col-md-3">
@@ -52,7 +54,6 @@
                                               name="message"></textarea>
                                 </div>
                             </div>
-
 
 
                             <!-- Button -->

@@ -55,6 +55,7 @@
                         @else
                             <li><a href="/">Home</a></li>
                             <li><a href="/article">Articles</a></li>
+                            <li><a href="/contact/create">Contact</a></li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                     {{ Auth::user()->name }} <span class="caret"></span>

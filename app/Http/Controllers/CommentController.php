@@ -51,12 +51,7 @@ class CommentController extends Controller
             'article_id' => $request->id,
             'content' => $request->content
         ]);
-
-<<<<<<< HEAD
         return redirect()->back()->with('success', 'Comment created');
-=======
-        return redirect()->back()->with('success', 'Commentaire créé');
->>>>>>> master
     }
 
     /**
@@ -114,11 +109,7 @@ class CommentController extends Controller
         $comment->content = $request->content;
         $comment->save();
 
-<<<<<<< HEAD
         return redirect()->route('article.show', [$comment->article->id])->with('success', 'Comment edited');
-=======
-        return redirect()->route('article.show', [$comment->article->id])->with('success', 'Commentaire modifié');
->>>>>>> master
     }
 
     /**
@@ -132,11 +123,7 @@ class CommentController extends Controller
         $comment = Comment::find($id);
 
         $comment->delete();
-
-<<<<<<< HEAD
+        
         return redirect()->route('article.show', [$comment->article->id])->with('success', 'Comment deleted');
-=======
-        return redirect()->route('article.show', [$comment->article->id])->with('success', 'Commentaire supprimé');
->>>>>>> master
     }
 }

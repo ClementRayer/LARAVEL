@@ -10,6 +10,10 @@ use Illuminate\Support\Facades\Storage;
 
 class ArticleController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('isAdmin', ['only' => 'destroy']);
+    }
     /**
      * Display a listing of the resource.
      *

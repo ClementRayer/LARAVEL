@@ -70,6 +70,7 @@
             <div class="top-right links">
                 @if (Auth::check())
                     <a href="{{ url('/home') }}">My profile</a>
+                    <a href="{{ url('/contact/create') }}">Contact Us</a>
                     <a href="{{ url('/article') }}">Articles</a>
                 @else
                     <a href="{{ url('/login') }}">Login</a>

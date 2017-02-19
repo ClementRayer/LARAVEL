@@ -54,8 +54,6 @@
                 <div class="panel panel-default">
                     <div class="panel-heading"><h4>Ecrire un commentaire</h4></div>
 
-                    @include('messages.errors')
-
                     <form method="POST" action="{{route('comment.store')}}" class="form-horizontal">
                         {{csrf_field()}}
                         <fieldset>
@@ -70,6 +68,8 @@
                           name="content"></textarea>
                                 </div>
                             </div>
+
+                            <input type="hidden" id="id" name="id" value="{{$article->id}}"/>
 
                             <!-- Button -->
                             <div class="form-group">

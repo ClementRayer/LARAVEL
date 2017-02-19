@@ -39,18 +39,20 @@ class CommentController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'content' => 'required'
+            'content' => 'required',
         ],
             [
-                'content.required' => 'Content obligatoire'
+                'content.required' => 'You have no content',
+                'article_id.required' => 'You need to be in an article',
             ]);
 
         Comment::create([
             'user_id' => Auth::user()->id,
+            'article_id' => $request->id,
             'content' => $request->content
         ]);
 
-        return redirect()->route('article.index');
+        return redirect()->back();
     }
 
     /**

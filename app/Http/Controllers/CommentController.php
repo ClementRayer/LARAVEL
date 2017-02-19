@@ -52,7 +52,7 @@ class CommentController extends Controller
             'content' => $request->content
         ]);
 
-        return redirect()->back();
+        return redirect()->back()->with('success', 'Commentaire créé');
     }
 
     /**
@@ -110,7 +110,7 @@ class CommentController extends Controller
         $comment->content = $request->content;
         $comment->save();
 
-        return redirect()->route('article.show', [$comment->article->id])->with('success', 'Article modifié');
+        return redirect()->route('article.show', [$comment->article->id])->with('success', 'Commentaire modifié');
     }
 
     /**
@@ -125,6 +125,6 @@ class CommentController extends Controller
 
         $comment->delete();
 
-        return redirect()->route('article.show', [$comment->article->id])->with('success', 'Article modifié');
+        return redirect()->route('article.show', [$comment->article->id])->with('success', 'Commentaire supprimé');
     }
 }

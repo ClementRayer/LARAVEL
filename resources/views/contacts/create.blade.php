@@ -4,6 +4,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
+                @include('messages.success')
                 <div class="panel panel-default">
                     <div class="panel-heading"><h4>Fill the form</h4></div>
 

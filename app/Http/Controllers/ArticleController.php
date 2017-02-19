@@ -43,7 +43,7 @@ class ArticleController extends Controller
         $this->validate($request, [
             'title' => 'required',
             'content' => 'required',
-            'thumbnail' => 'required',
+            'thumbnail' => 'required|image|max:2048',
         ],
             [
                 'title.required' => 'You have no title (that\'s essential)',

@@ -30,17 +30,14 @@ $factory->define(App\Article::class, function (Faker\Generator $faker) {
         'title' => $faker->city,
         'content' => $faker->paragraph(7),
         'thumbnail' =>'',
-        'user_id' => function () {
-            return factory(App\User::class)->create()->id;
-        }
+        'user_id' => rand(1, 30),
     ];
 });
 
 $factory->define(App\Comment::class, function (Faker\Generator $faker) {
     return [
         'content' => $faker->paragraph,
-        'user_id' => function () {
-            return factory(App\User::class)->create()->id;
-        }
+        'article_id' => rand(1, 30),
+        'user_id' => rand(1, 30),
     ];
 });

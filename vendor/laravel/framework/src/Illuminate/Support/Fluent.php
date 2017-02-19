@@ -189,4 +189,5 @@ class Fluent implements ArrayAccess, Arrayable, Jsonable, JsonSerializable
     {
         unset($this->attributes[$key]);
     }
+
 }

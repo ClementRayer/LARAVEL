@@ -20,7 +20,9 @@ class isAdmin
             && Auth::user()->role == "admin") {
             return $next($request);
         }
-
+        else{
+            echo 'Only admins can do that';
+        }
         return redirect('home');
     }
 }

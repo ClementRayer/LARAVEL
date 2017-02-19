@@ -278,7 +278,7 @@ class ComposerStaticInit3521998f6739092bf64f8128bcd9b6c8
         'CommentsTableSeeder' => __DIR__ . '/../..' . '/database/seeds/CommentsTableSeeder.php',
         'CreateArticlesTable' => __DIR__ . '/../..' . '/database/migrations/2017_02_07_142817_create_articles_table.php',
         'CreateCommentsTable' => __DIR__ . '/../..' . '/database/migrations/2017_02_16_221443_create_comments_table.php',
-        'CreateLikesTable' => __DIR__ . '/../..' . '/database/migrations/2017_02_19_124002_create_likes_table.php',
+        'CreateContactTable' => __DIR__ . '/../..' . '/database/migrations/2017_02_19_152523_create_contact_table.php',
         'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
         'CreateUsersTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_000000_create_users_table.php',
         'DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeds/DatabaseSeeder.php',

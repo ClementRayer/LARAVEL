@@ -12,7 +12,7 @@ return array(
     'CommentsTableSeeder' => $baseDir . '/database/seeds/CommentsTableSeeder.php',
     'CreateArticlesTable' => $baseDir . '/database/migrations/2017_02_07_142817_create_articles_table.php',
     'CreateCommentsTable' => $baseDir . '/database/migrations/2017_02_16_221443_create_comments_table.php',
-    'CreateLikesTable' => $baseDir . '/database/migrations/2017_02_19_124002_create_likes_table.php',
+    'CreateContactTable' => $baseDir . '/database/migrations/2017_02_19_152523_create_contact_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
     'CreateUsersTable' => $baseDir . '/database/migrations/2014_10_12_000000_create_users_table.php',
     'DatabaseSeeder' => $baseDir . '/database/seeds/DatabaseSeeder.php',

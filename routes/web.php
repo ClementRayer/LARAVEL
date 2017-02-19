@@ -23,6 +23,8 @@ Route::resource('/comment', 'CommentController');
 
 Route::resource('/user', 'UserController');
 
+Route::resource('/contact', 'ContactController');
+
 
 //EXO1
 

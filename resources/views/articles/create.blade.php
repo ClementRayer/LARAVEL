@@ -7,7 +7,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading"><h4>Write a new article</h4></div>
 
-                    <form method="POST" action="{{route('article.store')}}" class="form-horizontal">
+                    <form method="POST" enctype="multipart/form-data" action="{{route('article.store')}}" class="form-horizontal">
 
                         <fieldset>
                             <br>
@@ -29,6 +29,11 @@
                                     <textarea class="form-control" placeholder="Content" id="content"
                                               name="content"></textarea>
                                 </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="content">Image of your article</label>
+                                <input name="thumbnail" id="thumbnail" type="file">
                             </div>
 
                             <!-- Button -->

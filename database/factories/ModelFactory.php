@@ -29,6 +29,7 @@ $factory->define(App\Article::class, function (Faker\Generator $faker) {
     return [
         'title' => $faker->city,
         'content' => $faker->paragraph(7),
+        'thumbnail' =>'',
         'user_id' => function () {
             return factory(App\User::class)->create()->id;
         }

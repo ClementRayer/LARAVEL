@@ -33,7 +33,7 @@ class ArticleController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -42,16 +42,21 @@ class ArticleController extends Controller
 
         $this->validate($request, [
             'title' => 'required',
-            'content' => 'required'
+            'content' => 'required',
+            'thumbnail' => 'required',
         ],
-        [
-           'content.required' => 'Content obligatoire'
-        ]);
+            [
+                'title.required' => 'You have no title (that\'s essential)',
+                'content.required' => 'You have no content',
+                'thumbnail.required' => 'You have no thumbnail (that\'s important too)'
+            ]
+        );
 
         Article::create([
-           'user_id' => Auth::user()->id,
+            'user_id' => Auth::user()->id,
             'title' => $request->title,
-            'content' => $request->content
+            'content' => $request->content,
+            'thumbnail' => $request->thumbnail,
         ]);
 
         return redirect()->route('article.index');
@@ -61,14 +66,14 @@ class ArticleController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
         $article = Article::find($id);
 
-        if(!$article) {
+        if (!$article) {
             return redirect()->route('article.index');
         }
 
@@ -78,14 +83,14 @@ class ArticleController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
         $article = Article::find($id);
 
-        if(!$article) {
+        if (!$article) {
             return redirect()->route('article.index');
         }
 
@@ -95,8 +100,8 @@ class ArticleController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \Illuminate\Http\Request $request
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -105,9 +110,9 @@ class ArticleController extends Controller
             'title' => 'required',
             'content' => 'required'
         ],
-        [
-            'content.required' => 'Content obligatoire'
-        ]);
+            [
+                'content.required' => 'Content obligatoire'
+            ]);
 
         $article = Article::find($id);
 
@@ -122,7 +127,7 @@ class ArticleController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)

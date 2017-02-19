@@ -30,7 +30,7 @@
                                 <div class="form-group">
                                     <label class="col-md-4 control-label" for="content">Content of your article</label>
                                     <div class="col-md-7">
-                    <textarea class="form-control" rows="4" placeholder="Content" id="content"
+                                         <textarea class="form-control" rows="4" placeholder="Content" id="content"
                               name="content">{{$article->content}}</textarea>
                                     </div>
                                 </div>

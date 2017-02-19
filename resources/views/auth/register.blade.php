@@ -42,7 +42,8 @@
                             <label for="is_admin" class="col-md-4 control-label">Are you an admin?</label>
 
                             <div class="col-md-6">
-                                <input class="field" name="is_admin" type="checkbox" value="1">
+                                    <input type="hidden" name="_method" value="PUT">
+                                    <input type="checkbox" name="is_admin">
                                 <label for="is_admin">Yes</label>
                             </div>
                         </div>

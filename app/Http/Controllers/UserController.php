@@ -80,9 +80,12 @@ class UserController extends Controller
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        $user = Auth::user();
+
+        $user->is_admin = $request->is_admin;
+        $user->save();
     }
 
     /**

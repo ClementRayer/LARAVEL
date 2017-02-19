@@ -59,7 +59,7 @@ class ContactController extends Controller
             'message' => $request->message,
         ]);
 
-        return redirect()->route('contact.create')->with('success', 'Form Sent, thank you!');
+        return redirect('home')->with('success', 'Form sent, thank you!');
     }
 
     /**

@@ -37,17 +37,7 @@
                                 @endif
                             </div>
                         </div>
-
-                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="is_admin" class="col-md-4 control-label">Are you an admin?</label>
-
-                            <div class="col-md-6">
-                                    <input type="hidden" name="_method" value="PUT">
-                                    <input type="checkbox" name="is_admin">
-                                <label for="is_admin">Yes</label>
-                            </div>
-                        </div>
-
+                        
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                             <label for="password" class="col-md-4 control-label">Password</label>
 

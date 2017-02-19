@@ -80,7 +80,7 @@ class CommentController extends Controller
      */
     public function edit($id)
     {
-        $comment = Article::find($id);
+        $comment = Comment::find($id);
 
         if(!$comment) {
             return redirect()->route('article.index');
@@ -110,7 +110,7 @@ class CommentController extends Controller
         $comment->content = $request->content;
         $comment->save();
 
-        return redirect()->route('comment.show', [$comment->id])->with('success', 'Commentaire modifié');
+        return redirect()->back()->with('success', 'Commentaire modifié');
     }
 
     /**
@@ -125,6 +125,6 @@ class CommentController extends Controller
 
         $comment->delete();
 
-        return redirect()->route('article.index')->with('success', 'Commentaire supprimé');
+        return redirect()->back()->with('success', 'Commentaire supprimé');
     }
 }

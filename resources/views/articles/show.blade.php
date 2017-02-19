@@ -40,6 +40,8 @@
                         <h5>{{$comment->created_at}}</h5>
                         <br><br>
                         {{$comment->content}}</center>
+                        <br>
+                        <center><a class="btn btn-default" href="../comment/{{$comment->id}}/edit">Edit</a></center>
                         <hr>
                     @endforeach
 

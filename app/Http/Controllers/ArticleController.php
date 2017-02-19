@@ -6,6 +6,7 @@ use App\Article;
 use App\Comment;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class ArticleController extends Controller
 {
@@ -51,13 +52,11 @@ class ArticleController extends Controller
             ]
         );
 
-        $request->file('thumbnail')->store('thumbnail');
-
         Article::create([
             'user_id' => Auth::user()->id,
             'title' => $request->title,
             'content' => $request->content,
-            'thumbnail' => $request->file('thumbnail')->getRealPath(),
+            'thumbnail' => $request->file('thumbnail'),
         ]);
 
         return redirect()->route('article.index')->with('success', 'Article created');

@@ -35,6 +35,13 @@
                 <div class="panel panel-default">
                     <div class="panel-heading"><h4>Commentaire(s)</h4></div>
 
+                    @foreach($article->comments as $comment)
+                        <h4>By <a href="/user/{{$article->user_id}}">{{$comment->name}}</a></h4>
+                        <h5>{{$comment->created_at}}</h5>
+                        <br><br>
+                        {{$comment->content}}
+                        <hr>
+                    @endforeach
 
                 </div>
             </div>

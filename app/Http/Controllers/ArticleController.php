@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Article;
+use App\Comment;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -133,7 +134,6 @@ class ArticleController extends Controller
     public function destroy($id)
     {
         $article = Article::find($id);
-
         $article->delete();
 
         return redirect()->route('article.index')->with('success', 'Article supprimé');

@@ -33,7 +33,7 @@ class CommentController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -58,14 +58,14 @@ class CommentController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
         $comment = Comment::find($id);
 
-        if(!$comment) {
+        if (!$comment) {
             return redirect()->route('article.index');
         }
 
@@ -75,14 +75,14 @@ class CommentController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
-        $comment = Article::find($id);
+        $comment = Comment::find($id);
 
-        if(!$comment) {
+        if (!$comment) {
             return redirect()->route('article.index');
         }
 
@@ -92,8 +92,8 @@ class CommentController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \Illuminate\Http\Request $request
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -102,7 +102,7 @@ class CommentController extends Controller
             'content' => 'required'
         ],
             [
-                'content.required' => 'Content obligatoire'
+                'content.required' => 'You have no content'
             ]);
 
         $comment = Comment::find($id);
@@ -110,13 +110,13 @@ class CommentController extends Controller
         $comment->content = $request->content;
         $comment->save();
 
-        return redirect()->route('comment.show', [$comment->id])->with('success', 'Commentaire modifié');
+        return redirect()->route('article.show', [$comment->article->id])->with('success', 'Article modifié');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
@@ -125,6 +125,6 @@ class CommentController extends Controller
 
         $comment->delete();
 
-        return redirect()->route('article.index')->with('success', 'Commentaire supprimé');
+        return redirect()->route('article.show', [$comment->article->id])->with('success', 'Article modifié');
     }
 }

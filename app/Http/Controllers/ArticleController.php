@@ -60,7 +60,7 @@ class ArticleController extends Controller
             'thumbnail' => $request->thumbnail,
         ]);
 
-        return redirect()->route('article.index')->with('success', 'Article créé');
+        return redirect()->route('article.index')->with('success', 'Article created');
 
     }
 
@@ -121,7 +121,7 @@ class ArticleController extends Controller
         $article->content = $request->content;
         $article->save();
 
-        return redirect()->route('article.show', [$article->id])->with('success', 'Article modifié');
+        return redirect()->route('article.show', [$article->id])->with('success', 'Article edited');
 
     }
 
@@ -136,7 +136,7 @@ class ArticleController extends Controller
         $article = Article::find($id);
         $article->delete();
 
-        return redirect()->route('article.index')->with('success', 'Article supprimé');
+        return redirect()->route('article.index')->with('success', 'Article deleted');
 
     }
 }

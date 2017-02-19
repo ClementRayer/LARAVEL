@@ -39,8 +39,6 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
-
-
         $this->validate($request, [
             'title' => 'required',
             'content' => 'required',
@@ -53,15 +51,16 @@ class ArticleController extends Controller
             ]
         );
 
+        $request->file('thumbnail')->store('thumbnail');
+
         Article::create([
             'user_id' => Auth::user()->id,
             'title' => $request->title,
             'content' => $request->content,
-            'thumbnail' => $request->thumbnail,
+            'thumbnail' => $request->file('thumbnail')->getRealPath(),
         ]);
 
         return redirect()->route('article.index')->with('success', 'Article created');
-
     }
 
     /**
@@ -122,7 +121,6 @@ class ArticleController extends Controller
         $article->save();
 
         return redirect()->route('article.show', [$article->id])->with('success', 'Article edited');
-
     }
 
     /**
@@ -137,6 +135,5 @@ class ArticleController extends Controller
         $article->delete();
 
         return redirect()->route('article.index')->with('success', 'Article deleted');
-
     }
 }

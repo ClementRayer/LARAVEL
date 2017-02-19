@@ -29,7 +29,7 @@ $factory->define(App\Article::class, function (Faker\Generator $faker) {
     return [
         'title' => $faker->city,
         'content' => $faker->paragraph(10),
-        'thumbnail' => '',
+        'thumbnail' => '0',
         'user_id' => rand(1, 30),
     ];
 });

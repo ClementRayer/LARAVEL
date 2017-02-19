@@ -7,12 +7,12 @@
                 <div class="panel panel-default">
                     <div class="panel-heading"><h4>Write a new article</h4></div>
 
-                    <form method="POST" enctype="multipart/form-data" action="{{route('article.store')}}" class="form-horizontal">
+                    <form method="POST" enctype="multipart/form-data" action="{{route('article.store')}}"
+                          class="form-horizontal">
 
                         <fieldset>
                             <br>
-                        @include('messages.errors')
-                        <!-- Text input-->
+                            @include('messages.errors')
                             <div class="form-group">
                                 <label class="col-md-4 control-label" for="title">Title of your article</label>
                                 <div class="col-md-6">
@@ -22,7 +22,6 @@
                                 </div>
                             </div>
 
-                            <!-- Textarea -->
                             <div class="form-group">
                                 <label class="col-md-4 control-label" for="content">Content of your article</label>
                                 <div class="col-md-6">

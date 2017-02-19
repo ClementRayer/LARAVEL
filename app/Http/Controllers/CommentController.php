@@ -123,7 +123,7 @@ class CommentController extends Controller
         $comment = Comment::find($id);
 
         $comment->delete();
-        
+
         return redirect()->route('article.show', [$comment->article->id])->with('success', 'Comment deleted');
     }
 }

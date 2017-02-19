@@ -8,7 +8,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading"><h4>{{$article->title}}</h4></div>
                     <center>
-                        <br>
+                            <br><center><img src="{{$article->thumbnail}}" alt="No thumbnail"></center><br>
                         <p>{{$article->content}}</p><br>
                         <b>Written by <a href="/user/{{$article->user_id}}">{{$article->user->name}}</a><br><br><br></b>
 
@@ -39,7 +39,7 @@
                     @foreach($article->comments as $comment)
                        <center><h4>By <a href="/user/{{$comment->user_id}}">{{$comment->user->name}}</a></h4>
                         <h5>{{$comment->created_at}}</h5>
-                        <br><br>
+
                         {{$comment->content}}</center>
                         <br>
                         <center><a class="btn btn-default" href="../comment/{{$comment->id}}/edit">Edit</a></center>

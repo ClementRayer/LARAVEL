@@ -23,7 +23,7 @@
                         <a class="btn btn-default"
                            href="https://twitter.com/intent/tweet/?url=http://127.0.0.1:8000/article/{{$article->id}}&text=Regardez cet article!">Share
                             on Twitter</a>
-                        <br>
+                        <hr>
                 </div>
             </div>
         </div>

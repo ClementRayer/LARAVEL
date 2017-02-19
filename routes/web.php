@@ -24,8 +24,6 @@ Route::resource('/comment', 'CommentController');
 Route::resource('/user', 'UserController');
 
 
-
-
 //EXO1
 
 /*Route::get('/iim', function() {

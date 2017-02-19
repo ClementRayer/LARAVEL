@@ -59,7 +59,7 @@ class ArticleController extends Controller
             'thumbnail' => $request->thumbnail,
         ]);
 
-        return redirect()->route('article.index');
+        return redirect()->route('article.index')->with('success', 'Article créé');
 
     }
 
